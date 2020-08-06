@@ -1,0 +1,32 @@
+{
+  "name": "cypress_iva_minimal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "serve": "browser-sync start --config bs-config.js",
+    "prepare": "npx snowpack",
+    "e2e": "npx cypress open",
+    "browser-support": "npx browserslist",
+    "build": "npx webpack"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^1.1.0",
+    "bootstrap": "3.3.6",
+    "jquery": "~2.2.4",
+    "lit-element": "^2.3.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "cypress": "4.5.0",
+    "snowpack": "^1.7.1"
+  },
+  "snowpack": {
+    "webDependencies": [
+      "lit-element",
+      "lit-html",
+      "lit-html/directives/class-map.js",
+      "lit-html/directives/if-defined.js"
+    ]
+  }
+}
